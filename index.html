@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
+
+    <title>Gazali's Portfolio</title>
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo"></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="fullname">
+        <p>FirstName Lastname MiddleName</p>
+    </section>
+
+
+    <section class="container">
+        <div class="hero-avatar-container">
+            <div class="hero-avatar">
+                <img src="assets/profile.svg" alt="Profile picture" width="400px" height="400px">
+            </div>
+        </div>
+        <div id="hero-about-container">
+            <div class="about">
+                <h6>About</h6>
+                <p>Short video clips demonstrate WP standard’s values, showing customers rather than telling.It’s a departure from copy-driven pages, but it works in the favor of WP Standard as a brand of few words, or for brands that want to say a lot by saying very little.
+Reference: https://www.shopify.com/blog/how-to-write-an-about-us-page#</p>
+            </div>
+
+            <div class="socials-container">
+                <h6>Connect</h6>
+                <ul>
+                    <li><img src="assets/email.svg" alt="" class="icon-logo"></li>
+                    <li><img src="assets/linkedIn.svg" alt="" class="icon-logo"></li>
+                    <li><img src="assets/github.svg" alt="" class="icon-logo"></li>
+                </ul>
+            </div>
+        </div>
+        <div id="summary">
+            <div class="sm projects-done">
+                <h6>PROJECTS DONE</h6>
+                <p>5+</p>
+            </div>
+            <div class="sm experience-years">
+                <h6>YEARS OF EXPERIENCE</h6>
+                <p>5+</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
