@@ -440,6 +440,39 @@ h3{
 
 }
 
+.skll-set{
+    background: rgb(200,200,200);
+    padding: 10px;
+    border-radius: 10px;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.skll-set::after{
+    position: absolute;
+    content: "";
+    background: linear-gradient(to right, #8a2be2, #ff69b4, #1e90ff);
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+}
+
+.skll-set:hover{
+    background: linear-gradient(
+        to right,
+        rgba(105, 20, 40, 0.5) 0%,    
+        rgba(105, 20, 40, 0.5) 20%, 
+        rgba(75, 0, 130, 0.5) 60%,  
+        rgba(0, 0, 139, 0.5) 100%  
+    );
+}
+
+.skll-set:hover p{
+    color: #000;
+}
+
 .skll-set-container{
     margin: auto;
     padding: 20px;
@@ -518,6 +551,9 @@ h3{
     flex: 0 0 auto;
     min-width: 300px;
     scroll-snap-align: start;
+    display: flex;
+    gap: 1rem;
+    position: relative;
 }
 
 .company__img img{
@@ -525,3 +561,52 @@ h3{
     height: 400px;
     border-radius: 1rem;
 }
+
+.company__img{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.company__img span{
+    font-size: 30px;
+    margin-left: 20px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.companies li{
+    list-style: circle;
+    color: rgb(80,80,80);
+}
+
+.experience__description{
+    font-size: 20px;
+    font-family:"Ubuntu", sans-serif;
+    display: none;
+    max-height: 80%;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 10px;
+    background-color: #f5f5f5;
+    border-left: 4px solid #0078D4;
+    border-radius: 20px;
+}
+
+
+.experience__description.show{
+    display: block;
+    padding: 10px;
+}
+
+.experience__description ul{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+
+
+

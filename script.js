@@ -21,9 +21,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         rightArrow.addEventListener("click", () => {
             container.scrollBy({
-                left: 300,
+                left: 600,
                 behavior: "smooth"
             });
         });
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", function (){
+    const trigger = document.getElementById("concept-trigger");
+    const description = document.getElementById("description");
+
+    trigger.addEventListener( "click", function() {
+        description.classList.toggle("show");
+    });
 });
