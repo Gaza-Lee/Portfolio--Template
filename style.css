@@ -195,6 +195,8 @@ section{
 h6{
     font-size: 25px;
     margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .sm{
@@ -210,7 +212,9 @@ h6{
     justify-content: space-between;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 25%;
+    gap: 1rem;
 }
 
 .hero-avatar{
@@ -346,7 +350,7 @@ h6{
 }
 
 .service__text{
-    max-width: 55%;
+    width: 100%;
     flex: 1;
 }
 

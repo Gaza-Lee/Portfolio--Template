@@ -95,12 +95,33 @@
         font-size: 20px;
     }
 
+    #summary{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+
+    .sm{
+        flex: 1 1 auto;
+    }
+
     .sm p {
         font-size: 35px;
+        text-align: left;
     }
 
     .services__title h1 {
         font-size: 35px;
+    }
+
+    .service__no{
+        text-align: left;
+    }
+
+    .service__text p{
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .svc {
