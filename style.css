@@ -653,3 +653,49 @@ h3{
     width: 80%;
     border-radius: 1rem;
 }
+
+#projects{
+    background: rgb(240, 240, 240);
+    margin: 1rem 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pj__title{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: default;
+    margin: 2rem;
+    
+}
+
+.pj__title h1{
+    font-size: 55px;
+    font-weight: 600;
+    font-family: "Baskervville", sans-serif;
+}
+
+.pj__title h1 span{
+    background: linear-gradient(to right, #ff69b4, #8a2be2, #1e90ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;   
+}
+
+.pjs{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.pj__img img{
+    height: 300px;
+    width: 500px;
+    border-radius: 1rem;
+}
