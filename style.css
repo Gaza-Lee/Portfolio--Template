@@ -658,6 +658,7 @@ h3{
     background: rgb(240, 240, 240);
     margin: 1rem 2rem;
     padding: 1rem;
+    padding-bottom: 5rem;
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
@@ -695,7 +696,118 @@ h3{
 }
 
 .pj__img img{
-    height: 300px;
+    height: 400px;
     width: 500px;
     border-radius: 1rem;
+}
+
+.pj__btns{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pj__btn {
+    display: flex;
+    gap: 0.5rem;
+    text-align: center;
+    align-items: center;
+    padding: 5px 20px;
+    border: rgb(160, 160, 160) solid 1px;
+    border-radius: 2rem;
+}
+
+.pj__btn p{
+    color: #000;
+    font-weight: 500;
+}
+
+.pj{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border: rgb(160, 160, 160) solid 1px;
+    border-radius: 1rem;
+    padding: 20px;
+}
+
+.pj h1{
+    align-self: center;
+}
+
+.contact__details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 60%;
+}
+
+.my_email_n_phone{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin: 5px;
+    margin-bottom: 2rem;
+}
+
+.my_email_n_phone div{
+    flex: 1 1 50%;
+}
+
+.my_email_n_phone h6{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.my_email_n_phone p{
+    color: #000;
+    font-size: 24px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(240, 240, 240);
+    outline: none;
+    border: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.name_n__email{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.name_n__email input{
+    flex: 1 1 50%;
+}
+
+.subject input{
+    width: 100%;
+}
+
+textarea{
+    font-size: 20px;
+    background: rgb(240, 240, 240);
+    border: transparent;
+    border-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    min-height: 200px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.sendmsg{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sendmsg input{
+    border: transparent;
 }
