@@ -99,13 +99,12 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color: white;
     width: fit-content;
     max-height: 0;
     overflow: hidden;
     transition: all 0.3 ease-in-out;
     border-radius: 10px;
-    background-color: rgb(190, 190, 190);
+    background: rgb(240, 240, 240);
 }
 
 .menu-links a{
@@ -130,7 +129,7 @@ a:hover {
 }
 
 .menu-links.open{
-    max-height: 300px;
+    max-height: fit-content;
 }
 
 .hamburger-icon.open span:first-child{
@@ -160,7 +159,7 @@ a:hover {
 /*SECTIONS*/
 
 #fullname{
-    font-size: 50px;
+    font-size: 60px;
     font-family: "Ubuntu Mono", monospace;
     text-align: center;
     font-weight: 600;
@@ -647,8 +646,8 @@ h3{
 }
 
 .line{
-    height: 5px;
-    background: linear-gradient(to right, #8a2be2 0%, #0078D4 5%, rgb(220, 220, 220) 30%);
+    height: 2px;
+    background: linear-gradient(to right, #8a2be2 5%, #0078D4 30%, rgb(220, 220, 220) 30%);
     margin: 1rem;
     width: 80%;
     border-radius: 1rem;
@@ -766,7 +765,7 @@ h3{
 }
 
 input{
-    padding: 10px;
+    padding: 20px 30px;
     border-radius: 5px;
     background: rgb(240, 240, 240);
     outline: none;
@@ -775,7 +774,9 @@ input{
     -moz-appearance: none;
     appearance: none;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 16px;
+    font-family: 'Ubuntu';
+    font-weight: 600;
 }
 
 .name_n__email{
