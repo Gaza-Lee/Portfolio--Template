@@ -542,11 +542,6 @@ h3{
     justify-content: center;
 }
 
-.arrows:hover span{
-    background: linear-gradient(to right, #ff69b4, #8a2be2, #1e90ff);
-}
-
-
 .experience__details{
     display: flex;
     gap: 1rem;
@@ -690,8 +685,16 @@ h3{
 .pjs{
     display: flex;
     flex-direction: row;
-    overflow: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding-bottom: 1rem;
+    scrollbar-color: transparent;
     gap: 1rem;
+}
+
+.pjs::-webkit-scrollbar {
+    display: none;
 }
 
 .pj__img img{
@@ -811,4 +814,16 @@ textarea{
 
 .sendmsg input{
     border: transparent;
+    border-radius: 10rem;
+    padding: 10px 20px;
+    color: rgb(80, 80, 80);
+}
+
+.sendmsg:hover input{
+    background: linear-gradient(to right,
+        rgba(138, 43, 226, 0.8),
+        rgba(0,0,0, 0.5)100%
+  );
+color: #000;
+cursor: pointer;
 }

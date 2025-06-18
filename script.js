@@ -37,3 +37,24 @@ document.addEventListener("DOMContentLoaded", function (){
         description.classList.toggle("show");
     });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    const leftArrow = document.querySelector(".arrw.left");
+    const rightArrow = document.querySelector(".arrw.right");
+    const pjContainer = document.querySelector(".pjs")
+
+    if (leftArrow && rightArrow && pjContainer){
+        leftArrow.addEventListener("click", () => {
+            pjContainer.scrollBy({
+                left: -500,
+                behavior: smooth
+            });
+        });
+        rightArrow.addEventListener("click", () =>{
+            pjContainer.scrollBy({
+                left: 500,
+                behavior: smooth
+            });
+        });
+    }
+} )
