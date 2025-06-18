@@ -6,26 +6,51 @@ function toggleMenu(){
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.querySelector(".experience__details");
-    const leftArrow = document.querySelector(".arrows span:first-child");
-    const rightArrow = document.querySelector(".arrows span:last-child");
+    const expContainer = document.querySelector(".experience__details");
+    const expLeftArrow = document.querySelector(".experience-arrows .left");
+    const expRightArrow = document.querySelector(".experience-arrows .right");
 
-    if (container && leftArrow && rightArrow) {
+    const pjContainer = document.querySelector(".pjs");
+    const pjLeftArrow = document.querySelector(".project-arrows .left");
+    const pjRightArrow = document.querySelector(".project-arrows .right");
 
-        leftArrow.addEventListener("click", () => {
-            container.scrollBy({
+    //Experience container
+    if (expContainer && expLeftArrow && expRightArrow){
+        expLeftArrow.addEventListener("click", () => {
+            console.log("Left")
+            expContainer.scrollBy({
                 left: -300,
-                behavior: "smooth"
+                behavior: "smooth",
             });
         });
 
-        rightArrow.addEventListener("click", () => {
-            container.scrollBy({
-                left: 600,
-                behavior: "smooth"
+        expRightArrow.addEventListener("click", () =>{
+            console.log("Right")
+            expContainer.scrollBy({
+                left: 300,
+                behavior: "smooth",
+            })
+        })
+    }
+
+    //Project Arrows
+    if (pjContainer && pjLeftArrow && pjRightArrow){
+        pjLeftArrow.addEventListener("click", ()=>{
+            console.log("left Pj")
+            pjContainer.scrollBy({
+                left: -580,
+                behavior: "smooth",
+            });
+        });
+
+        pjRightArrow.addEventListener("click", ()=>{
+            pjContainer.scrollBy({
+                left: 580,
+                behavior: "smooth",
             });
         });
     }
+   
 });
 
 
@@ -37,24 +62,3 @@ document.addEventListener("DOMContentLoaded", function (){
         description.classList.toggle("show");
     });
 });
-
-window.addEventListener("DOMContentLoaded", () => {
-    const leftArrow = document.querySelector(".arrw.left");
-    const rightArrow = document.querySelector(".arrw.right");
-    const pjContainer = document.querySelector(".pjs")
-
-    if (leftArrow && rightArrow && pjContainer){
-        leftArrow.addEventListener("click", () => {
-            pjContainer.scrollBy({
-                left: -500,
-                behavior: smooth
-            });
-        });
-        rightArrow.addEventListener("click", () =>{
-            pjContainer.scrollBy({
-                left: 500,
-                behavior: smooth
-            });
-        });
-    }
-} )
