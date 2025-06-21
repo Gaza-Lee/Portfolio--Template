@@ -712,6 +712,14 @@ h3{
     border-radius: 2rem;
 }
 
+.pj__btn:hover{
+   background: linear-gradient(to right,
+        rgba(138, 43, 226, 0.2),
+        rgba(0,0,0, 0.5)
+        );
+        cursor: pointer;
+}
+
 .pj__btn p{
     color: #000;
     font-weight: 500;
@@ -728,6 +736,10 @@ h3{
 
 .pj h1{
     align-self: center;
+}
+
+#contact{
+    justify-content: space-around;
 }
 
 .contact__details{
@@ -822,6 +834,13 @@ color: #000;
 cursor: pointer;
 }
 
+form {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 
 /*Arrows*/
 
@@ -872,7 +891,6 @@ cursor: pointer;
     );
     border-radius: 20rem;
     transform:scale(1.1);
-
 }
 
 

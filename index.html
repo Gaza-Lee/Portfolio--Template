@@ -11,7 +11,7 @@
 </head>
 <body>
     <nav id="desktop-nav">
-        <div class="logo"></div>
+        <div class="logo">FirstName</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -25,7 +25,7 @@
         </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo"></div>
+        <div class="logo">FirstName</div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -398,10 +398,9 @@
                             possibilities.
                         </p>
                     </div>
-                     <div class="line">
+                    <div class="line">
+                    </div>
                 </div>
-                </div>
-               
             </div>
             <div class="testi_individual_wrapper">
                 <div class="profile_testi">
@@ -430,6 +429,16 @@
             <h1>
                 Proj<span>ects</span>
             </h1>
+
+            <div class="projct-description">
+                <p> Innovation fuels progress, shaping industries and 
+                    transforming lives. Creativity and resilience drive 
+                    reakthroughs, forging paths toward a brighter, 
+                    more connected future filled with endless 
+                    possibilities.
+                </p>
+            </div>
+
              <div class="arrows project-arrows">
                 <span><img src="assets/arrowleft.svg" alt="" class="left"></span>
                 <span><img src="assets/arrowright.svg" alt="" class="right"></span>
@@ -443,7 +452,7 @@
                 <h1 class="pj__name">Project One</h1>
                 <div class="pj__btns">
                     <div class="pj__btn">
-                        <img src="assets/github.svg" alt="">
+                        <img src="assets/github.svg" alt="" onclick="location.href ='https://github.com'">
                         <p>GITHUB</p>
                     </div>
                     <div class="pj__btn">
@@ -460,7 +469,7 @@
                 <h1 class="pj__name">Project Two</h1>
                  <div class="pj__btns">
                     <div class="pj__btn">
-                        <img src="assets/github.svg" alt="">
+                        <img src="assets/github.svg" alt="" onclick="location.href ='https://github.com'">
                         <p>GITHUB</p>
                     </div>
                     <div class="pj__btn">
@@ -476,7 +485,7 @@
                 <h1 class="pj__name">Project Three</h1>
                 <div class="pj__btns">
                     <div class="pj__btn">
-                        <img src="assets/github.svg" alt="">
+                        <img src="assets/github.svg" alt="" onclick="location.href ='https://github.com'">
                         <p>GITHUB</p>
                     </div>
                     <div class="pj__btn">
@@ -492,7 +501,7 @@
                 <h1 class="pj__name">Project Three</h1>
                 <div class="pj__btns">
                     <div class="pj__btn">
-                        <img src="assets/github.svg" alt="">
+                        <img src="assets/github.svg" alt="" onclick="location.href ='https://github.com'">
                         <p>GITHUB</p>
                     </div>
                     <div class="pj__btn">
@@ -508,7 +517,7 @@
                 <h1 class="pj__name">Project Three</h1>
                 <div class="pj__btns">
                     <div class="pj__btn">
-                        <img src="assets/github.svg" alt="">
+                        <img src="assets/github.svg" alt="" onclick="location.href ='https://github.com'">
                         <p>GITHUB</p>
                     </div>
                     <div class="pj__btn">
@@ -538,21 +547,23 @@
                     <p>+123 12 345 6789</p>
                 </div>
             </div>
-            <div class="name_n__email">
-                <input type="text" placeholder="Name"/>
-                <label for="email"></label>
-                <input type="text" placeholder="Email/Phone"/>
-            </div>
-            <div class="subject">
-                <label for="subject"></label>
+            <form action="">
+                <div class="name_n__email">
+                    <input type="text" placeholder="Name"/>
+                    <label for="email"></label>
+                    <input type="text" placeholder="Email/Phone"/>
+                </div>
+                <div class="subject">
+                    <label for="subject"></label>
                     <input type="text" placeholder="Subject">
-            </div>
-            <div class="message">
-                <textarea placeholder="Leave a message"></textarea>
-            </div>
-            <div class="sendmsg">
-                <input type="submit" value="Send Message" />
-            </div>
+                </div>
+                <div class="message">
+                    <textarea placeholder="Leave a message"></textarea>
+                </div>
+                <div class="sendmsg">
+                    <input type="submit" value="Send Message" />
+                </div>
+            </form>
        </div>
     </section>
 

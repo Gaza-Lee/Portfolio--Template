@@ -38,14 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
         pjLeftArrow.addEventListener("click", ()=>{
             console.log("left Pj")
             pjContainer.scrollBy({
-                left: -580,
+                left: -400,
                 behavior: "smooth",
             });
         });
 
         pjRightArrow.addEventListener("click", ()=>{
             pjContainer.scrollBy({
-                left: 580,
+                left: 400,
                 behavior: "smooth",
             });
         });
