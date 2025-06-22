@@ -556,8 +556,12 @@ h3{
 
 .company__img img{
     width: 100%;
-    height: 400px;
+    aspect-ratio: 4 / 3;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 1rem;
+    display: block;
 }
 
 .company__img{
@@ -692,9 +696,13 @@ h3{
 }
 
 .pj__img img{
-    height: 400px;
-    width: 525px;
+    width: 100%;
+    aspect-ratio: 16 / 19; 
+    height: auto;
+    max-height: 600px;
+    object-fit: cover;
     border-radius: 1rem;
+    display: block;
 }
 
 .pj__btns{

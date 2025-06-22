@@ -68,10 +68,6 @@
     padding: 0 40px;
   }
 
-  .company__img img {
-    height: 345px;
-  }
-
   .experience-description,
   .experience__description {
     font-size: 18px;
@@ -186,10 +182,6 @@
     flex-direction: column;
     }
 
-  .company__img img {
-    height: 450px;
-    }
-
   .arrows {
     justify-content: center;
     }
@@ -202,11 +194,6 @@
         margin-bottom: 15rem;
         padding: 30px;
         margin: 20px;
-    }
-
-    .pj__img img{
-        width: 680px;
-        height: 400px;
     }
 
     .name_n__email {
@@ -223,6 +210,8 @@
     width: 100%;
    }
 }
+
+
 
 
 
@@ -284,11 +273,6 @@
         font-size: 20px;
     }
 
-    .company__img img{
-        width: 500px;
-        height: 350px;
-    }
-
     .icon img {
         height: 20px;
         width: 25px;
@@ -323,19 +307,12 @@
         padding: 0;
     }
 
-    .pj__img img{
-        width: 480px;
-        height: 400px;
-    }
-
     .my_email_n_phone{
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 }
-
-
 
 
 
@@ -385,11 +362,6 @@
         margin-bottom: 10rem;
     }
 
-    .company__img img{
-        width: 380px;
-        height: 250px;
-    }
-
     #testimonials{
         margin-bottom: 10rem;
     }
@@ -430,5 +402,95 @@
 
     .skll-set-container {
         padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .company__img img,
+    .pj__img img {
+        max-height: 250px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .exp-edu {
+        width: 100%;
+        max-width: 320px; 
+        min-width: 0;
+        box-sizing: border-box;
+        margin: 0 auto; 
+    }
+}
+
+@media (max-width: 400px) {
+    .company__img img,
+    .pj__img img {
+        max-height: 180px;
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (max-width: 900px) {
+    .company__img img,
+    .pj__img img {
+        max-height: 380px;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+@media (max-width: 500px) {
+    .companies,
+    .company__img {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+    .company__img img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        max-height: 180px;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+    .exp-edu {
+        width: 100%;
+        max-width: 500px;
+        min-width: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    .my_email_n_phone {
+        flex-direction: column;
+        width: 100%;
+        max-width: 500px;
+        min-width: 0;
+        box-sizing: border-box;
+        gap: 1rem;
+        margin: 0 auto 2rem auto;
+    }
+
+     .companies,
+    .company__img {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+        margin: 0 auto;
+    }
+
+    .company__img img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        max-height: 350px;
+        object-fit: cover;
+        display: block;
     }
 }
