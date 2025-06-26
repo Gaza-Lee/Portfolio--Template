@@ -37,7 +37,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    margin: 0px 60px;
+    margin: 0 auto;  
     position: sticky;
     left: 0;
     top: 0;
@@ -46,7 +46,7 @@ nav {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     background: #f7f7f7;
     box-sizing: border-box;
-    padding: 10px 20px;
+    padding: 10px 60px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
@@ -1004,4 +1004,34 @@ body.dark-mode .pj__btn {
 body.dark-mode .company__img img,
 body.dark-mode .pj__img img {
     filter: brightness(0.85);
+}
+
+body.dark-mode #desktop-nav,
+body.dark-mode #hamburger-nav {
+    background: #181818;
+    color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.32);
+}
+
+body.dark-mode .nav-links a,
+body.dark-mode .menu-links a {
+    color: rgb(100, 100, 100);
+}
+
+body.dark-mode .menu-links{
+    background: rgb(30, 30, 30);
+}
+
+body.dark-mode #desktop-nav .logo,
+body.dark-mode #hamburger-nav .logo{
+    color: #fff;
+}
+
+body.dark-mode .hamburger-icon span{
+    background-color: #fff;
+}
+
+body.dark-mode .nav-links a:hover,
+body.dark-mode .menu-links a:hover {
+    color: #fff;
 }
