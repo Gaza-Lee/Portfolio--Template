@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pjLeftArrow = document.querySelector(".project-arrows .left");
     const pjRightArrow = document.querySelector(".project-arrows .right");
 
-    //Experience container
+    //Experience Arrows
     if (expContainer && expLeftArrow && expRightArrow){
         expLeftArrow.addEventListener("click", () => {
             console.log("Left")
@@ -62,3 +62,30 @@ document.addEventListener("DOMContentLoaded", function (){
         description.classList.toggle("show");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Theme toggle
+    const themeToggle = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Load saved theme
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        themeToggle.textContent = "☀️";
+    }
+
+    themeToggle.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+        if (body.classList.contains("dark-mode")) {
+            themeToggle.textContent = "☀️";
+            localStorage.setItem("theme", "dark");
+        } else {
+            themeToggle.textContent = "🌙";
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+}

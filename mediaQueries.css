@@ -5,6 +5,22 @@
         display: none;
     }
 
+    .floating-buttons {
+        bottom: 16px;
+        right: 16px;
+        gap: 8px;
+    }
+    #scroll-to-top,
+    #theme-toggle {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .project-arrows{
+        display: none;
+    }
+
      #hamburger-nav {
         display: flex;
         justify-content: space-between;

@@ -11,6 +11,7 @@
 body{
     font-family: "Finlandica", sans-serif;
     background-color: rgb();
+    padding-bottom: 5rem;
 }
 
 html {
@@ -37,6 +38,17 @@ nav {
     align-items: center;
     height: 10vh;
     margin: 0px 60px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: #f7f7f7;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .nav-links{
@@ -917,4 +929,79 @@ form {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.floating-buttons {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+#scroll-to-top,
+#theme-toggle {
+    background: #232323;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+#scroll-to-top:hover,
+#theme-toggle:hover {
+    background: #444;
+    color: #ffd700;
+    transform: scale(1.08);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #181818;
+    color: #f5f5f5;
+}
+
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h6,
+body.dark-mode a {
+    color: #f5f5f5;
+}
+
+body.dark-mode .svc,
+body.dark-mode .exp-edu,
+body.dark-mode #experience,
+body.dark-mode #projects,
+body.dark-mode .testi_individual_wrapper,
+body.dark-mode .skl {
+    background: #232323;
+    border-color: #444;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode nav {
+    background: #232323;
+    color: #f5f5f5;
+}
+
+body.dark-mode .pj__btn {
+    border-color: #444;
+}
+
+body.dark-mode .company__img img,
+body.dark-mode .pj__img img {
+    filter: brightness(0.85);
 }
