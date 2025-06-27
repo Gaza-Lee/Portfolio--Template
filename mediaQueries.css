@@ -109,7 +109,6 @@
 }
 
 
-
 @media (max-width: 900px) {
     .nav-links {
         display: none;
@@ -281,18 +280,19 @@
     .svc__details {
         gap: 1rem;
     }
-
-    .exp-edu{
-        width: 450px;
+    
+    .exp-edu {
+        min-width: 0;
+        width: 100%;
+        padding: 1rem;
     }
-
     .exp-edu p {
         font-size: 16px;
         line-height: 24px;
     }
 
     .skll-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
     }
 
     .skll-set-container h1 {
