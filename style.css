@@ -8,6 +8,10 @@
     padding: 0;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body{
     font-family: "Montserrat", sans-serif;
     background-color: rgb();

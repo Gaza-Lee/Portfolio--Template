@@ -291,6 +291,15 @@
         line-height: 24px;
     }
 
+    .skll-wrapper{
+        width: 100%;
+        text-align: center;
+    }
+
+    .cd-lang h1{
+        margin-left: -30px;
+    }
+
     .skll-grid {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -376,11 +385,14 @@
         width: 300px;
     }
 
+    
+
     .skll-grid {
         grid-template-columns: repeat(1, 1fr);
     }
 
     #experience{
+        width: 100%;
         margin: 5px;
         padding: 5px;
         width: 380px;
@@ -393,6 +405,7 @@
     }
 
     #projects{
+        width: 100%;
         margin: 5px;
         padding: 5px;
         width: 380px;
@@ -405,7 +418,6 @@
         padding: 0;
         margin: 0;
     }
-
     
     .my_email_n_phone{
         display: flex;

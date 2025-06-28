@@ -94,7 +94,7 @@ function setupFadeInSections() {
 function setupContactForm() {
     const form = document.querySelector("form");
     if (!form) return;
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
         e.preventDefault();
         const name = form.querySelector('input[placeholder="Name"]').value.trim();
         const email = form.querySelector('input[placeholder="Email/Phone"]').value.trim();
@@ -104,8 +104,28 @@ function setupContactForm() {
             alert("Please fill in all fields.");
             return;
         }
-        alert("Message sent! (Demo)");
-        form.reset();
+        // Simple email validation
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        try {
+            const response = await fetch("https://localhost:5001/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ name, email, subject, message })
+            });
+            const data = await response.json();
+            if (response.ok && data.success) {
+                alert("Message sent!");
+                form.reset();
+            } else {
+                alert("Failed to send message: " + (data.message || "Unknown error"));
+            }
+        } catch (err) {
+            alert("Could not connect to backend: " + err.message);
+        }
     });
 }
 
@@ -168,6 +188,45 @@ function setupSmoothAnchors() {
     });
 }
 
+function setupContactForm() {
+    const form = document.querySelector("form");
+    if (!form) return;
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const name = form.querySelector('input[placeholder="Name"]').value.trim();
+        const email = form.querySelector('input[placeholder="Email/Phone"]').value.trim();
+        const subject = form.querySelector('input[placeholder="Subject"]').value.trim();
+        const message = form.querySelector('textarea').value.trim();
+        if (!name || !email || !subject || !message) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Send to backend API
+        try {
+            const response = await fetch("https://localhost:5001/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    subject,
+                    message
+                })
+            });
+            const data = await response.json();
+            if (response.ok && data.success) {
+                alert("Message sent!");
+                form.reset();
+            } else {
+                alert("Failed to send message: " + (data.message || "Unknown error"));
+            }
+        } catch (err) {
+            alert("Could not connect to backend: " + err.message);
+        }
+    });
+}
+
 // Initialize all features
 document.addEventListener("DOMContentLoaded", function () {
     setupArrows();
@@ -179,4 +238,5 @@ document.addEventListener("DOMContentLoaded", function () {
     setupCopyEmail();
     setupScrollToTopButton();
     setupSmoothAnchors();
+    setupContactForm() 
 });
