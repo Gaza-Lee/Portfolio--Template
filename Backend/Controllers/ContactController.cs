@@ -25,6 +25,8 @@ namespace PortfolioApi.Controllers
             {
                 return BadRequest(new { success = false, message = "Invalid input." });
             }
+
+            // Configure SMTP client and send email. Check readMe for best Practices.
             try
             {
                 var mail = new MailMessage

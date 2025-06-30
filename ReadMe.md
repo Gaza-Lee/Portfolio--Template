@@ -47,7 +47,3 @@ cd Portfolio
 3. Open `index.html` in your browser or use Live Server in VS Code.
 
 ---
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
