@@ -26,7 +26,7 @@ A clean, responsive, and dark-themed personal portfolio website built using **HT
 - **CSS3**
 - **JavaScript (Vanilla)**
 - **Media Queries** for responsiveness
-
+- **ASP.NET Core** for Backend
 ---
 
 
@@ -47,3 +47,16 @@ cd Portfolio
 3. Open `index.html` in your browser or use Live Server in VS Code.
 
 ---
+
+## ⚙️ Backend (Contact API)
+**Requirement**
+- **.NET 8 SDK**
+- **An SMTP email account(Outlook,gmail etc)**
+Check Backend README.md
+
+---
+
+You must configure placeholders, **your_email@emxample.com,password and Smtp provider details** to actually receive a message in your email.
+
+---
+Live preview https://portfoliotemplatete.netlify.app/
