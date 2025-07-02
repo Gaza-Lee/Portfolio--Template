@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\NSFW\\JS\\Portfolio\\Portfolio\\backend\\PortfolioApi.csproj": {}
+    "D:\\NSFW\\JS\\Portfolio\\Portfolio\\Backend\\PortfolioApi.csproj": {}
   },
   "projects": {
-    "D:\\NSFW\\JS\\Portfolio\\Portfolio\\backend\\PortfolioApi.csproj": {
+    "D:\\NSFW\\JS\\Portfolio\\Portfolio\\Backend\\PortfolioApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\NSFW\\JS\\Portfolio\\Portfolio\\backend\\PortfolioApi.csproj",
+        "projectUniqueName": "D:\\NSFW\\JS\\Portfolio\\Portfolio\\Backend\\PortfolioApi.csproj",
         "projectName": "PortfolioApi",
-        "projectPath": "D:\\NSFW\\JS\\Portfolio\\Portfolio\\backend\\PortfolioApi.csproj",
+        "projectPath": "D:\\NSFW\\JS\\Portfolio\\Portfolio\\Backend\\PortfolioApi.csproj",
         "packagesPath": "C:\\Users\\gazaw\\.nuget\\packages\\",
-        "outputPath": "D:\\NSFW\\JS\\Portfolio\\Portfolio\\backend\\obj\\",
+        "outputPath": "D:\\NSFW\\JS\\Portfolio\\Portfolio\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

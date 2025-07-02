@@ -49,12 +49,15 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    background: #f7f7f7;
     box-sizing: border-box;
     padding: 10px 60px;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    background: rgba(247, 247, 247, 0.2); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
 }
 
 .nav-links{
@@ -670,13 +673,22 @@ h3{
     color: rgb(80,80,80);
 }
 
-#concept-trigger{
-    transition: background 0.2s, color 0.2s, transform 0.2s;;
+.concept-trigger{
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgb(200, 200, 200);
+    color: rgb(75, 75, 75);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
 }
 
-#concept-trigger:hover{
-    color: rgb(100, 100, 100);
-    transform: scale(1.2);
+.concept-trigger:hover{
+    transform: translateY(-2px) scale(1.1);
 }
 
 .experience__description{
@@ -695,7 +707,8 @@ h3{
 
 .experience__description.show{
     display: block;
-    padding: 10px;
+    padding-left: 30px;
+    animation: fadeInUp 0.4s ease-out;
 }
 
 .experience__description ul{
@@ -936,12 +949,12 @@ textarea{
     color: rgb(80, 80, 80);
 }
 
-.sendmsg:hover input{
+.sendmsg input:hover{
     background: linear-gradient(to right,
         rgba(138, 43, 226, 0.8),
         rgba(0,0,0, 0.5)100%
   );
-color: #000;
+color: #fff;
 cursor: pointer;
 }
 

@@ -37,13 +37,29 @@ function setupArrows() {
 
 // Concept Toggle
 function setupConceptToggle() {
-    const trigger = document.getElementById("concept-trigger");
-    const description = document.getElementById("description");
-    if (trigger && description) {
-        trigger.addEventListener("click", function () {
-            description.classList.toggle("show");
-        });
-    }
+  const triggers = document.querySelectorAll('.concept-trigger');
+  
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', function() {
+      const currentDescription = this.closest('.companies').querySelector('.experience__description');
+      const isAlreadyOpen = currentDescription.classList.contains('show');
+      
+      document.querySelectorAll('.experience__description.show').forEach(desc => {
+        desc.classList.remove('show');
+      });
+      
+      if (!isAlreadyOpen) {
+        currentDescription.classList.add('show');
+        
+        setTimeout(() => {
+          currentDescription.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest'
+          });
+        }, 100);
+      }
+    });
+  });
 }
 
 // Theme Toggle
@@ -188,6 +204,7 @@ function setupSmoothAnchors() {
     });
 }
 
+//Contact form, Message sends to my email
 function setupContactForm() {
     const form = document.querySelector("form");
     if (!form) return;
