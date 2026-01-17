@@ -10,50 +10,66 @@ namespace PortfolioApi.Controllers
     [Route("api/contact")]
     public class ContactController : ControllerBase
     {
-        [HttpGet]
-    public IActionResult Get() => Ok("Backend is running!");
+        private readonly IConfiguration _configuration;
 
+        public ContactController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        [HttpGet]
+        public IActionResult Get() => Ok("Backend is running!");
 
         [HttpPost]
         public IActionResult SendMessage([FromBody] ContactForm form)
         {
-             if (string.IsNullOrWhiteSpace(form.Name) ||
+            if (string.IsNullOrWhiteSpace(form.Name) ||
                 string.IsNullOrWhiteSpace(form.Email) ||
                 string.IsNullOrWhiteSpace(form.Subject) ||
                 string.IsNullOrWhiteSpace(form.Message) ||
                 !Regex.IsMatch(form.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
             {
-                return BadRequest(new { success = false, message = "Invalid input." });
+                return BadRequest(new { success = false, message = "Invalid input. Please ensure all fields are filled correctly." });
             }
 
-            // Configure SMTP client and send email. Check readMe for best Practices.
             try
             {
+                var smtpSettings = _configuration.GetSection("SmtpSettings");
+                var server = smtpSettings["Server"];
+                var port = int.Parse(smtpSettings["Port"] ?? "587");
+                var senderEmail = smtpSettings["SenderEmail"];
+                var password = smtpSettings["Password"];
+                var receiverEmail = smtpSettings["ReceiverEmail"];
+                var enableSsl = bool.Parse(smtpSettings["EnableSsl"] ?? "true");
+
                 var mail = new MailMessage
                 {
-                    From = new MailAddress("your_email@example.com"),
-                    Subject = form.Subject,
-                    Body = $"From: {form.Name} <{form.Email}>\n\n{form.Message}"
+                    From = new MailAddress(senderEmail, smtpSettings["SenderName"]),
+                    Subject = $"[Portfolio] {form.Subject}",
+                    Body = $"You have a new contact message:\n\nName: {form.Name}\nEmail: {form.Email}\n\nMessage:\n{form.Message}",
+                    IsBodyHtml = false
                 };
-                mail.To.Add("your_email@example.com");
+                mail.To.Add(receiverEmail);
 
-                using var smtp = new SmtpClient("smtp.provider.com")
+                using var smtp = new SmtpClient(server)
                 {
-                    Port = 587,
-                    Credentials = new NetworkCredential("your_email@example.com", "your_password"),
-                    EnableSsl = true
+                    Port = port,
+                    Credentials = new NetworkCredential(senderEmail, password),
+                    EnableSsl = enableSsl
                 };
 
                 smtp.Send(mail);
 
-                return Ok(new { success = true, message = "Message sent successfully." });
+                return Ok(new { success = true, message = "Message sent successfully!" });
             }
-            catch
+            catch (Exception ex)
             {
+                // In production, you would log 'ex' using a logging framework.
                 return StatusCode(500, new
                 {
                     success = false,
-                    message = "Error sending message.",
+                    message = "Error sending message. Please try again later.",
+                    debugInfo = ex.Message // Optional: remove in production
                 });
             }
         }
