@@ -1,4 +1,4 @@
-/* Dark mode styles - Refactored for DRY using CSS Variables */
+/* Dark mode styles */
 body.dark-mode {
     --bg-primary: #181818;
     --bg-secondary: #232323;
@@ -41,5 +41,5 @@ body.dark-mode .hamburger-icon span {
 }
 
 body.dark-mode .experience__description {
-    border-color: #0078D4; /* Maintain consistency if variables don't cover it */
+    border-color: #0078D4;
 }

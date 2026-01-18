@@ -1,0 +1,10 @@
+# .NET build output
+Backend/bin/
+Backend/obj/
+
+# Local secret / runtime config
+Backend/bin/Debug/net8.0/setting.json
+
+# OS / editor
+.DS_Store
+*.user

@@ -1,26 +1,26 @@
 
-# 🌐 Personal Portfolio Website
+# Personal Portfolio Website
 
 A clean, responsive, and dark-themed personal portfolio website built using **HTML**, **CSS**, and **JavaScript**. This project showcases your professional profile, skills, and projects in a visually appealing manner with interactive elements.
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🌑 Dark mode styling
-- 📱 Fully responsive layout (optimized for mobile, tablet, and desktop)
-- 👤 About section with career background
-- 🛠️ Skills and technologies section
-- 📂 Portfolio/projects showcase
-- 📫 Contact form
-- 🔗 Social media links
-
----
-
+- Dark mode styling
+- Fully responsive layout (optimized for mobile, tablet, and desktop)
+- About section with career background
+- Skills and technologies section
+- Portfolio/projects showcase
+- Contact form
+- Social media links
 
 ---
 
-## 🏗️ Built With
+
+---
+
+## Built With
 
 - **HTML5**
 - **CSS3**
@@ -30,7 +30,7 @@ A clean, responsive, and dark-themed personal portfolio website built using **HT
 ---
 
 
-## ⚙️ Setup Instructions
+## Setup Instructions
 
 1. Clone the repository:
 
@@ -44,11 +44,11 @@ git clone https://github.com/Gaza-Lee/Portfolio--Template.git
 cd Portfolio
 ```
 
-3. Open `index.html` in your browser or use Live Server in VS Code.
+3. Open `frontend/index.html` in your browser or use Live Server in VS Code.
 
 ---
 
-## ⚙️ Backend (Contact API)
+## Backend (Contact API)
 **Requirement**
 - **.NET 8 SDK**
 - **An SMTP email account(Outlook,gmail etc)**

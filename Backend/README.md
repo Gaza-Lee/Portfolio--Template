@@ -9,7 +9,7 @@ An ASP.NET Core Web API backend to receive contact form messages and send them t
 
 ## How to Run
 
-1. Replace placeholder email and SMTP values in `ContactController.cs`
+1. Replace the placeholder SMTP values (`Server`, `SenderEmail`, `Password`, `ReceiverEmail`, etc.) in `appsettings.json`
 2. Open terminal in the project directory
 3. Run the API:
 
